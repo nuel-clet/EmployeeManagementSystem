@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "ListUser";
+}
+
+<h1>List of Users</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                User Name
+            </th>
+            <th>
+                User Id
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => user.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Id)
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
